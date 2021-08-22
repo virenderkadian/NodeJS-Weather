@@ -46,7 +46,7 @@ app.get('/weather',(req,res)=>{
     if(!req.query.location){
         
         return res.send({
-            error:'Please Enter a Location in search query'
+            error:'Please Enter a Location in search bar'
         })
     }
 
