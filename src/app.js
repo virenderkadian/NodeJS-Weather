@@ -7,6 +7,8 @@ const forecast=require('./utils/forecast.js')
 const app =express()
 
 
+const port=process.env.PORT || 4000
+
 
 const publicDir=path.join(__dirname,'../public')
 const viewsPath=path.join(__dirname,'../template/views')
@@ -103,7 +105,7 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(4000,()=>{
-    console.log('connection made')
+app.listen(port,()=>{
+    console.log('connection made on '+port)
 })
 
