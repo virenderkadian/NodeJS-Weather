@@ -8,7 +8,8 @@ const forecast=({latitude:lat,longitude:lon}=geocodeData,callback)=>{
         }else if(body.error){
             callback('Unale to find Location',undefined)
         }else {
-            callback(undefined,'It is currently '+body.current.temp_c +' degree out. There is a '+ body.current.precip_mm+'% chance of rain.')
+            
+            callback(undefined,'It is currently '+body.current.temp_c +' degree out. There is a '+ body.current.precip_mm+'% chance of rain. Humidity today is '+body.current.humidity+'. Temperature feels like '+body.current.feelslike_c)
         }
     })
 }
